@@ -2,17 +2,17 @@
 class City{
   late String name;
   late String iso3;
-  late String code;
-  late List<dynamic> populationCounts;
+  late String unicodeFlag;
+  //late List<dynamic> populationCounts;
 
-  City({required this.name,required this.iso3,required this.code,required this.populationCounts});
+  City({required this.name,required this.iso3,required this.unicodeFlag,/*required this.populationCounts*/});
 
   factory City.fromJson(Map<String, dynamic> json) {
     return City(
-      name: json['country'] as String,
-      code: json['code'] as String,
+      name:  json['name'] as String,
+      unicodeFlag: json['unicodeFlag'] as String,
       iso3: json['iso3'] as String,
-      populationCounts: json['populationCounts'] as List<dynamic>,
+      //populationCounts: json['populationCounts'] as List<dynamic>,
     );
   }
 

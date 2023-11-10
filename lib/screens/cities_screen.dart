@@ -33,12 +33,12 @@ class CitiesPage extends StatelessWidget {
                     ),
                     elevation: 5,
                     margin: EdgeInsets.all(10),
-                    child: Center(
+                    child:  Center(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            cities[index].name,
+                            '${cities[index].name}\t${cities[index].unicodeFlag}',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 18.0,
@@ -47,7 +47,7 @@ class CitiesPage extends StatelessWidget {
                           ),
                           SizedBox(height: 8.0),
                           Text(
-                            '${cities[index].iso3}\t${cities[index].populationCounts[0]['value']}',
+                            cities[index].iso3,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 14.0,
