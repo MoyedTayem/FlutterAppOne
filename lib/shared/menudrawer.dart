@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_v1/screens/cities_screen.dart';
+import 'package:flutter_v1/screens/shared_preferences.dart';
 import 'package:flutter_v1/screens/starting_screen.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -17,7 +18,7 @@ class MenuDrawer extends StatelessWidget {
   }
 
   List<Widget> buildMenuItems(BuildContext context) {
-    final List<String> menuTitles = ["home", "cities"];
+    final List<String> menuTitles = ["Home", "Cities","Shared Preferences App"];
     List<Widget> menuItems = [];
     menuItems.add(DrawerHeader(
         decoration: BoxDecoration(color: Colors.indigo),
@@ -29,11 +30,14 @@ class MenuDrawer extends StatelessWidget {
         title: Text(element, style: TextStyle(fontSize: 18)),
         onTap: () {
           switch (element) {
-            case "home":
+            case "Home":
               screen = StartingScreen();
               break;
-            case "cities":
+            case "Cities":
               screen = CitiesPage();
+              break;
+            case "Shared Preferences App":
+              screen = SharedPreferencesApp();
               break;
           }
               

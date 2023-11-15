@@ -33,7 +33,7 @@ class CitiesPage extends StatelessWidget {
                     ),
                     elevation: 5,
                     margin: EdgeInsets.all(10),
-                    child:  Center(
+                    child: Center(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
